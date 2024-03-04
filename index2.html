@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Plant SEO Page</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body class="">
+
+    <nav class="navbar navbar-expand-md bg-whitet">
+        <div class="container-fluid">
+            <a class="navbar-brand playfair" href="#">My Plants</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active font-16" aria-current="page" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active font-16" aria-current="page" href="#">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active font-16" aria-current="page" href="#">Plants</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active font-16" aria-current="page" href="#">Delivery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active font-16" aria-current="page" href="#">Help</a>
+                    </li>
+                </ul>
+                <form class="d-flex position-relative " role="search">
+                    <input class="form-control-sm border border-1 focus-ring me-2 rounded-pill" type="search"
+                        style="--bs-focus-ring-color: rgba(var(--bs-success-rgb), .0)" placeholder="Search"
+                        aria-label="Search">
+                    <img src="./src/navbar/search.svg" width="20px" height="20px" id="search"
+                        class="position-absolute end-0 top-50 translate-middle-y search-icon" alt="">
+                </form>
+            </div>
+        </div>
+    </nav>
+    <section
+        class="container-fluid overflow-x-hidden hero d-flex flex-column flex-md-row-reverse align-items-md-center justify-content-center">
+        <div class="carouselContainer mt-5 mt-md-0 position-relative">
+            <div id="carouselContainer" class="animateCarousel">
+                <div class="item bg-info"></div>
+                <div class="item bg-info-subtle "></div>
+                <div class="item bg-secondary "></div>
+                <div class="item bg-secondary-subtle "></div>
+                <div class="item bg-warning-subtle "></div>
+                <div class="item bg-warning "></div>
+            </div>
+
+            <div class="carousel-buttons gap-2 d-flex align-items-center position-absolute">
+                <div class="btn btn-close-white shade-tertiary rounded-circle d-flex justify-content-center align-items-center back-button"
+                    id="carouselBackBtn"><img src="./src/hero/playbtnNext.svg" height="10px" alt="back"></div>
+                <div class="progress custom-progress rounded-2 d-inline-block ">
+                </div>
+                <div class="btn btn-close-white rounded-circle shade-tertiary d-flex justify-content-center align-items-center next-button"
+                    id="carouselNextBtn"><img src="./src/hero/playbtn.svg" height="10px" alt="next"></div>
+            </div>
+
+        </div>
+        <div class="heroTitle ms-4 d-flex flex-column justify-content-center playfair">
+            <h5 class="my-2">--- Love Nature</h5>
+            <h1 class="primary-font my-4">Take a new friend to your home</h1>
+            <div class="d-flex row-gap-3 column-gap-2 flex-wrap my-2">
+                <button class="btn btn-outline-dark rounded-pill px-4">Plant Care</button>
+                <button class="btn btn-dark text-white rounded-pill px-4">Buy a plant</button>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="container-md py-4">
+        <h3 class="playfair text-center">Plant Collection</h3>
+
+        <div class="d-flex flex-column flex-md-row">
+            <div class="overflow-hidden collectionsCarouselContainer">
+
+                <div class="d-flex" id="collectionsCarousel">
+                    <div class="item p-4">
+                        <div class="card flex-shrink-0"><img src="./src/collections/plant-2.svg" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="card-text">Garden Plants</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item p-4">
+                        <div class="card flex-shrink-0"><img src="./src/collections/plant-2.svg" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="card-text">Indoor Plants</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item p-4">
+                        <div class="card flex-shrink-0"><img src="./src/collections/plant-2.svg" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="card-text">Home Plants</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item p-4">
+                        <div class="card flex-shrink-0"><img src="./src/collections/plant-2.svg" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="card-text">Garden Plants</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item p-4">
+                        <div class="card flex-shrink-0"><img src="./src/collections/plant-2.svg" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="card-text">Indoor Plants</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item p-4">
+                        <div class="card flex-shrink-0"><img src="./src/collections/plant-2.svg" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="card-text">Home Plants</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="carouselControls d-flex flex-md-column flex-row-reverse justify-content-center gap-1">
+                <img role="button" src="./src/collections/Group 22.svg" alt="" id="nextBtn">
+                <img role="button" src="./src/collections/Group 21.svg" alt="" id="backBtn">
+
+            </div>
+        </div>
+    </section>
+
+    <section class="container d-flex flex-column flex-md-row justify-content-around gap-md-3  align-items-center py-5">
+        <img src="./src/experience/hero.svg" class="hero-img"></img>
+        <div class="hero-text mt-5">
+            <h3 class="playfair fs-1">Our journey</h3>
+            <p class="playfair text-neutral mt-4">It is a long established fact that a reader will be distracted by
+                the
+                readable content
+                of a page when It
+                is a long .It is a long established fact that a reader will be distracted by the readable content of a
+                is simply.</p>
+
+            <button class="btn btn-dark shade-primary rounded-pill px-4">Get Start</button>
+        </div>
+    </section>
+
+
+    <section class="container p-5 pb-2">
+        <h3 class="playfair primary-font my-5">Our Advantages</h3>
+        <div class="row justify-content-center gx-5 gy-3">
+            <div class="col-10 col-md-6 col-lg-4">
+                <div
+                    class="flex-shrink-0 rounded-1  position-relative px-5 py-4 border border-0 secondary-background flex-row">
+                    <img src="./src/advantages/wateringcan.svg" width="50px" height="50px"
+                        class="card-img-top position-absolute end-0 top-50 translate-middle " alt="can">
+                    <div class="card-body ps-1">
+                        <h5 class="card-title">Easy Order</h5>
+                        <p class="card-text">It is a long established fact that a reader will be.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-md-6 col-lg-4">
+                <div
+                    class="flex-shrink-0 rounded-1 position-relative px-5 py-4 border border-0 secondary-background flex-row">
+                    <img src="./src/advantages/wateringcan.svg" width="50px" height="50px"
+                        class="card-img-top position-absolute end-0 top-50 translate-middle " alt="can">
+                    <div class="card-body ps-1">
+                        <h5 class="card-title">Easy Order</h5>
+                        <p class="card-text">It is a long established fact that a reader will be.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-md-6 col-lg-4">
+                <div
+                    class="flex-shrink-0 rounded-1 position-relative px-5 py-4 border border-0 secondary-background flex-row">
+                    <img src="./src/advantages/wateringcan.svg" width="50px" height="50px"
+                        class="card-img-top position-absolute end-0 top-50 translate-middle " alt="can">
+                    <div class="card-body ps-1">
+                        <h5 class="card-title">Easy Order</h5>
+                        <p class="card-text">It is a long established fact that a reader will be.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container p-5">
+        <h2 class="playfair">What Clients talk about us</h2>
+        <div class="carouselTestimony">
+            <div class="item">
+
+            </div>
+            <div class="item">
+
+            </div>
+            <div class="item"></div>
+        </div>
+    </section>
+
+    <script src="./script2.js"></script>
+</body>
+
+</html>
