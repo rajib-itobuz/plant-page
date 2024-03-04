@@ -1,0 +1,201 @@
+@font-face {
+  font-family: playfair;
+  src: url(./fonts/playfair.ttf);
+}
+.primary-font {
+  color: #3E8847;
+}
+
+.font-dark {
+  color: #09270d;
+}
+
+.playfair {
+  font-family: "playfair", serif;
+}
+
+.text-neutral {
+  color: #727272;
+}
+
+.secondary-background {
+  background-color: #FCFBF8;
+}
+
+.text-tertiary {
+  color: #B0BAA3;
+}
+
+.font-10 {
+  font-size: 0.6rem;
+}
+
+.search-icon {
+  translate: -100%;
+}
+
+.font-16 {
+  font-size: 0.8rem;
+}
+
+.text-title {
+  color: #D0D6c9;
+}
+
+.shade-primary {
+  box-shadow: 0px 20px 27px 0px rgba(2, 22, 5, 0.17);
+}
+
+.shade-secondary {
+  box-shadow: 0 34px 50px -28px rgba(2, 22, 5, 0.1);
+}
+
+.carousel-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+}
+
+.item {
+  height: 100%;
+  width: 100%;
+}
+.item:nth-child(1), .item:nth-child(2) {
+  top: 50%;
+  left: 50%;
+  max-width: 600px;
+  transform: translate(-50%, -50%);
+  max-height: 400px;
+}
+.item:nth-child(2) {
+  z-index: 999;
+}
+
+.carousel-buttons {
+  left: 50%;
+  bottom: -40px;
+  transform: translateX(-50%);
+}
+.carousel-buttons .custom-progress {
+  height: 4px;
+  width: 180px;
+}
+
+.back-button,
+.next-button {
+  padding: 10px;
+}
+.back-button img,
+.next-button img {
+  width: 10px;
+  height: 10px;
+}
+
+.collectionsCarousel {
+  transition: transform 0.2s ease;
+}
+
+.collections-container {
+  width: 19rem;
+  overflow: hidden;
+}
+
+.carousel-text {
+  margin-top: 50px;
+}
+
+.hero-img {
+  max-width: 300px;
+}
+
+.hero-text {
+  max-width: 400px;
+}
+
+.custom-card {
+  width: 80%;
+}
+
+.hover-card .imgDiv {
+  border-radius: 50%;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+  background-color: #3E8847;
+}
+.hover-card .imgDiv img {
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(157deg) brightness(102%) contrast(101%);
+  height: 40px;
+  width: 40px;
+}
+.hover-card:hover {
+  background-color: #3E8847;
+  color: white;
+}
+.hover-card:hover .text-neutral {
+  color: white;
+}
+.hover-card:hover .primary-font {
+  color: white;
+}
+.hover-card:hover .font-dark {
+  color: white;
+}
+.hover-card:hover .imgDiv {
+  background-color: white;
+}
+.hover-card:hover .imgDiv img {
+  filter: invert(46%) sepia(8%) saturate(2978%) hue-rotate(76deg) brightness(96%) contrast(85%);
+}
+
+.footer-background {
+  background-color: #09270d;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel-container {
+    width: unset;
+    height: 500px;
+    flex-grow: 5;
+  }
+  .collections-container {
+    width: 38rem;
+  }
+  .carousel-text {
+    margin-top: unset;
+    flex-shrink: 0;
+    flex-grow: 1;
+    max-width: 300px;
+  }
+  .carousel-buttons {
+    left: 30%;
+    bottom: 10%;
+    transform: translate(-50%, 200%);
+  }
+  .item:nth-child(n+3) {
+    right: -100px;
+    z-index: 9;
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-height: 500px;
+    max-width: 250px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .collections-container {
+    width: 57rem;
+  }
+  .carousel-buttons {
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-100%);
+  }
+  .custom-card {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .item:nth-child(n+3) {
+    right: 50px;
+  }
+}/*# sourceMappingURL=style.css.map */
