@@ -3,8 +3,16 @@
     src: url(./fonts/playfair.ttf);
 }
 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+$illustrationShadow: drop-shadow(-16px 59px 5px rgba(#021605, 0.08));
 $primaryAccent: #3E8847;
 $secondaryAccent: #FCFBF8;
+$form-bg: #FAF9F7;
 
 // global classes
 .primary-font {
@@ -59,128 +67,6 @@ $secondaryAccent: #FCFBF8;
     box-shadow: 0px 3px 13px 0px rgba($color: #000000, $alpha: 0.12);
 }
 
-
-
-.hero {
-    height: 100vh;
-    padding-top: 50px;
-}
-
-.heroTitle {
-    margin-top: 100px;
-    flex-grow: 2;
-    flex-shrink: 0;
-}
-
-.carouselContainer {
-    flex-grow: 5;
-    flex-shrink: 0;
-    // height: 80%;
-    position: relative;
-
-    .animateCarousel{
-    }
-    
-    .item {
-        width: 100%;
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        height: 50%;
-
-        &:nth-child(1),
-        &:nth-child(2) {
-            min-width: 280px;
-            max-width: 700px;
-            min-height: 400px;
-            border-radius: 1rem;
-            position: absolute;
-            top: 50%;
-            translate: 0% -50%;
-        }
-
-        &:nth-child(2) {
-            z-index: 999;
-        }
-
-        &:nth-child(n+3) {
-
-            max-width: 280px;
-            height: 60%;
-            min-height: 500px;
-            margin-right: -50px;
-            border-radius: 1rem;
-            aspect-ratio: 4/3;
-            position: absolute;
-            top: 50%;
-            right: 0px;
-            translate: 0% -50%;
-        }
-
-        &:last-child(n+3){
-            z-index: 998;
-        }
-    }
-
-    .carousel-buttons {
-        bottom: -150px;
-        left: 0;
-
-        .nextButton,
-        .backButton {
-            padding: 10px;
-
-            img {
-                width: 10px;
-                height: 10px;
-            }
-        }
-
-        .custom-progress {
-            height: 4px;
-            width: 5rem;
-        }
-    }
-}
-
-
-
-.collectionsCarouselContainer {
-    width: 99%;
-
-    div {
-        transition: transform 0.2s ease;
-    }
-
-    .item {
-        width: 33%;
-        min-width: 280px;
-        height: 100%;
-        flex-shrink: 0;
-
-    }
-}
-
-.carouselControls {
-    width: 100%;
-    flex-shrink: 0;
-
-    img {
-        width: 40px;
-        height: 40px;
-    }
-}
-
-.hero-img {
-    max-width: 300px;
-}
-
-.hero-text {
-    max-width: 300px;
-}
-
-.custom-card {
-    width: 80%;
-}
-
 .hover-card {
     .imgDiv {
         border-radius: 50%;
@@ -224,25 +110,380 @@ $secondaryAccent: #FCFBF8;
     }
 }
 
+.fit-content {
+    width: fit-content;
+    height: fit-content;
+}
+
+.width-fit {
+    width: fit-content;
+}
+
+.feature-card-image {
+    margin-left: -70px;
+    margin-right: 10px;
+}
+
+.form-bg {
+    background-color: $form-bg;
+}
+
+
+
+// .hero {
+//     height: 100vh;
+//     padding-top: 50px;
+// }
+
+// .heroTitle {
+//     margin-top: 100px;
+//     flex-grow: 1;
+//     flex-shrink: 0;
+// }
+
+.section-1 {
+    height: 120vh;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+}
+
+.hero {
+    position: unset;
+    width: 100%;
+    padding: 30px;
+    height: fit-content;
+    left: 0;
+}
+
+
+.carouselContainer {
+    .item {
+        width: 100%;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        height: 50%;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+            width: 92%;
+            min-width: 280px;
+            max-width: 700px;
+            min-height: 400px;
+            border-radius: 1rem;
+            position: absolute;
+            top: 50%;
+            translate: 0% -50%;
+        }
+
+        &:nth-child(2) {
+            z-index: 999;
+        }
+
+        &:nth-child(n+3) {
+            visibility: hidden;
+            max-width: 280px;
+            height: 60%;
+            min-height: 500px;
+            margin-right: -50px;
+            border-radius: 1rem;
+            aspect-ratio: 4/3;
+            position: absolute;
+            top: 50%;
+            right: 0px;
+            translate: 0% -50%;
+        }
+
+        &:nth-child(3) {
+            z-index: 998;
+        }
+    }
+
+    .carousel-buttons {
+        z-index: 999;
+        bottom: -15px;
+        left: 15px;
+
+        .nextButton,
+        .backButton {
+            padding: 10px;
+
+            img {
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        .custom-progress {
+            height: 4px;
+            width: 5rem;
+        }
+    }
+}
+
+
+
+.collectionsCarouselContainer {
+    width: 99%;
+
+    div {
+        transition: transform 0.5s ease;
+    }
+
+    .item {
+        width: 33%;
+        min-width: 280px;
+        height: 100%;
+        flex-shrink: 0;
+
+    }
+}
+
+.carouselControls {
+    width: 100%;
+    flex-shrink: 0;
+
+    img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.hero-img {
+    max-width: 300px;
+}
+
+.hero-text {
+    max-width: 80%;
+}
+
+.custom-card {
+    width: 80%;
+}
+
+.carouselTestimony {
+
+    // .active::before
+
+    .item {
+        width: 80%;
+        max-width: 800px;
+        height: 100px;
+    }
+}
+
+.plant-care-text {
+    width: 80%;
+    // max-width: 350px;
+}
+
+.plant-care-image {
+    width: 80%;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    // max-width: 400px;
+}
+
+.footer-background {
+    background-color: #09270d;
+}
+
+.illustration-plant,
+.illustration-leaf-single {
+    display: none;
+}
+
+.leaf-illustration-4 {
+    right: 5%;
+    translate: 0% 100%;
+    height: 100px;
+}
+
+.leaf-illustration-7 {
+    right: 75%;
+    translate: 0% -15%;
+    height: 100px;
+}
+
+.leaf-illustration-5 {
+    right: -2%;
+    height: 80px;
+    translate: 0% 100%;
+}
+
+.leaf-illustration-6 {
+    right: 30%;
+    rotate: -90deg;
+    height: 120px;
+    filter: $illustrationShadow;
+}
+
+.blur-blob {
+    background-color: #78BF81;
+    z-index: 999;
+    filter: blur(120px);
+    border-radius: 50%;
+}
+
+.blur-illustration {
+    width: 240px;
+    height: 240px;
+    left: -20%;
+    translate: 0% 10%;
+}
+
+.blur-illustration-2 {
+    width: 240px;
+    height: 240px;
+    left: -2%;
+    translate: 0% 0%;
+}
+
+.blur-illustration-3 {
+    width: 240px;
+    height: 100px;
+    left: 53%;
+    translate: -50% -40%;
+}
+
+.illustration-leaf-group {
+    display: unset;
+    left: 0;
+    width: 120px;
+    translate: 0% -120%;
+    filter: $illustrationShadow
+}
+
+.contactusSection {
+    height: 80vh;
+}
+
+
+.form-background {
+    background: url(./src/form/form-background.svg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 100%;
+    border-top-right-radius: unset;
+    border-bottom-right-radius: unset;
+}
+
+.form-container {
+    width: 90%;
+    max-width: 800px;
+    height: fit-content;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    left: 50%;
+    top: 50%;
+    translate: -50% -64%;
+
+    .textAreaFormDiv {
+        label {
+            color: #9C9FA6;
+            bottom: 10px;
+            left: 10px;
+        }
+
+        textarea {
+            display: table-cell;
+            vertical-align: bottom;
+        }
+
+        textarea:focus &:label {
+            opacity: 0;
+            transition: all .5s ease;
+        }
+    }
+}
+
+
 @media screen and (min-width:572px) {
+    .section-1 {
+        height: 100vh;
+    }
+
     .carouselContainer .carousel-buttons {
-        bottom: -100px;
+        bottom: -40px;
         left: unset;
-        right: 300px;
+        right: 40px;
     }
 }
 
 
 @media screen and (min-width:768px) {
 
-    .hero {
+    .form-background {
+        width: 75%;
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+    }
+
+    .form-container {
+        right: 0;
+        width: 55%;
+        left: unset;
+        translate: 0% -50%;
+        border-top-right-radius: unset;
+        border-bottom-right-radius: unset;
+    }
+
+    .illustration-plant {
+        display: unset;
+        right: 0;
+        width: 250px;
+        translate: 0% -25%;
+    }
+
+    .illustration-leaf-single {
+        top: -15%;
+        filter: $illustrationShadow;
+    }
+
+    .illustration-leaf-group {
+        display: unset;
+        left: 0;
+        width: 120px;
+        translate: 0% -120%;
+        filter: $illustrationShadow
+    }
+
+    .section-1 {
         height: 80vh;
     }
 
-    .heroTitle {
-        max-width: 300px;
-        z-index: 99999;
+    .carousel {
+        width: 70%;
+        height: 100%;
+    }
 
+    .plant-care-text {
+        width: 70%;
+        flex-grow: 0;
+        max-width: 500px;
+    }
+
+    .plant-care-image {
+        width: 50%;
+        border-top-right-radius: unset;
+        border-bottom-right-radius: unset;
+    }
+
+    .hero {
+        position: absolute;
+        width: 40%;
+        z-index: 999;
+        top: 50%;
+        translate: 0% -50%;
+        height: fit-content;
+        left: 0;
+    }
+
+    .hero-text {
+        max-width: 338px;
     }
 
     .carouselContainer {
@@ -252,8 +493,12 @@ $secondaryAccent: #FCFBF8;
             right: 50px;
         }
 
+        .item:nth-child(n+3) {
+            visibility: visible;
+        }
+
         .carousel-buttons {
-            bottom: -250px;
+            bottom: 20px;
             left: unset;
             right: 300px;
         }
@@ -262,5 +507,11 @@ $secondaryAccent: #FCFBF8;
     .carouselControls {
         // width: 80px;
         width: fit-content;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .carousel-buttons {
+        bottom: 50px;
     }
 }
