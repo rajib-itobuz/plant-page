@@ -99,10 +99,11 @@ const calcCurrentOffset = () => {
 const timer = setInterval(() => {
     count = (count + 1) % 11;
 
-
     progress.style.width = `${count * 10}%`
     if (count == 10) {
         carouselNextBtn.click();
+        nextBtn.click();
+
     }
 }, 500)
 

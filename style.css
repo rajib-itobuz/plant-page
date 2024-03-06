@@ -164,6 +164,10 @@ body {
   filter: invert(46%) sepia(8%) saturate(2978%) hue-rotate(76deg) brightness(96%) contrast(85%);
 }
 
+.hover-icon-carousel:hover {
+  filter: invert(82%) sepia(13%) saturate(1698%) hue-rotate(342deg) brightness(104%) contrast(92%);
+}
+
 .section-1 {
   height: 120vh;
 }
@@ -222,7 +226,7 @@ body {
 }
 .carouselContainer .carousel-buttons {
   z-index: 999;
-  bottom: -15px;
+  bottom: -35px;
   left: 15px;
 }
 .carouselContainer .carousel-buttons .nextButton,
@@ -236,7 +240,7 @@ body {
 }
 .carouselContainer .carousel-buttons .custom-progress {
   height: 4px;
-  width: 5rem;
+  width: 6rem;
 }
 .carouselContainer .carousel-buttons .custom-progress .custom-progress-bar {
   transition: all 600ms ease-in-out;

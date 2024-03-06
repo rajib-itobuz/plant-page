@@ -186,6 +186,10 @@ body {
     filter: invert(46%) sepia(8%) saturate(2978%) hue-rotate(76deg) brightness(96%) contrast(85%);
 }
 
+.hover-icon-carousel:hover {
+    filter: invert(82%) sepia(13%) saturate(1698%) hue-rotate(342deg) brightness(104%) contrast(92%);
+}
+
 
 .section-1 {
     height: 120vh;
@@ -252,7 +256,7 @@ body {
 
     .carousel-buttons {
         z-index: 999;
-        bottom: -15px;
+        bottom: -35px;
         left: 15px;
 
         .nextButton,
@@ -267,7 +271,7 @@ body {
 
         .custom-progress {
             height: 4px;
-            width: 5rem;
+            width: 6rem;
 
             .custom-progress-bar {
                 transition: all 600ms ease-in-out;
