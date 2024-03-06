@@ -10,149 +10,175 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="overflow-x-hidden">
 
-    <nav class="navbar navbar-expand-md bg-whitet">
-        <div class="container-fluid">
-            <a class="navbar-brand playfair" href="#">My Plants</a>
+    <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-md">
+            <a class="navbar-brand playfair" href="#">My <span class="primary-font">Plants</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link active font-16" aria-current="page" href="#">About</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item fw-medium">
+                        <a class="nav-link font-16">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active font-16" aria-current="page" href="#">Shop</a>
+                    <li class="nav-item fw-medium">
+                        <a class="nav-link font-16" aria-current="page" href="#">Shop</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active font-16" aria-current="page" href="#">Plants</a>
+                    <li class="nav-item fw-medium">
+                        <a class="nav-link font-16" aria-current="page" href="#">Plants</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active font-16" aria-current="page" href="#">Delivery</a>
+                    <li class="nav-item fw-medium">
+                        <a class="nav-link font-16" aria-current="page" href="#">Delivery</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active font-16" aria-current="page" href="#">Help</a>
+                    <li class="nav-item fw-medium">
+                        <a class="nav-link font-16" aria-current="page" href="#">Help</a>
                     </li>
                 </ul>
-                <form class="d-flex position-relative " role="search">
+                <div class="d-flex position-relative me-2 mb-2 mb-lg-0 width-fit" role="search">
                     <input class="form-control-sm border border-1 focus-ring me-2 rounded-pill" type="search"
-                        style="--bs-focus-ring-color: rgba(var(--bs-success-rgb), .0)" placeholder="Search"
-                        aria-label="Search">
+                        style="--bs-focus-ring-color: rgba(var(--bs-success-rgb), .0)" placeholder="Search products...">
                     <img src="./src/navbar/search.svg" width="20px" height="20px" id="search"
-                        class="position-absolute end-0 top-50 translate-middle-y search-icon" alt="">
-                </form>
+                        class="position-absolute end-0 top-50 translate-middle-y search-icon" alt="searchicon">
+                </div>
+                <div class="d-flex gap-3 position-relative" role="search">
+                    <img role="button" class="nav-link" src="./src/navbar/bag.svg" alt="cart">
+                    <img role="button" class="nav-link" src="./src/navbar/add-user.svg" alt="user">
+                </div>
             </div>
         </div>
     </nav>
 
-    <section class="container-fluid ">
-
-    </section>
-
-    <section
-        class="hero container-lg overflow-hidden d-flex flex-column flex-md-row-reverse justify-content-between align-items-center">
-        <div id="heroCarousel" class="carousel-container">
+    <section class="position-relative section-1 d-flex flex-column flex-md-row-reverse justify-content-start">
+        <div class="carousel carouselContainer p-3 p-md-0 position-relative ">
+            <div id="carouselContainer" class="animateCarousel">
+            </div>
 
             <div class="carousel-buttons gap-2 d-flex align-items-center position-absolute">
-                <button
-                    class="btn btn-close-white rounded-circle d-flex justify-content-center align-items-center back-button"><img
-                        src="./src/hero/playbtnNext.svg" alt="back"></button>
-                <div class="progress custom-progress rounded-2 d-inline-block ">
+                <button id="carouselBackBtn"
+                    class="fit-content rounded-circle position-relative z-3  p-2 d-flex justify-content-center align-items-center btn shade-tertiary">
+                    <img src="./src/hero/playbtnNext.svg" width="15px" alt="next">
+                </button>
+
+                <div class="custom-progress rounded-2 overflow-x-hidden d-inline-block bg-secondary-green">
+                    <div id="progressBar" class="custom-progress-bar h-100 primary-bg"></div>
                 </div>
-                <button
-                    class="btn btn-close-white rounded-circle d-flex justify-content-center align-items-center next-button"><img
-                        src="./src/hero/playbtn.svg" alt="next"></button>
+                <button id="carouselNextBtn"
+                    class="fit-content rounded-circle position-relative z-3  p-2 d-flex justify-content-center align-items-center btn shade-tertiary">
+                    <img src="./src/hero/playbtn.svg" width="15px" alt="back">
+                </button>
             </div>
         </div>
 
-        <div class="carousel-text playfair p-3 d-flex flex-column justify-content-between">
-            <h5 class="my-2">--- Love Nature</h5>
-            <h1 class="primary-font my-2">Take a new friend to your home</h1>
-            <div class="d-flex row-gap-3 column-gap-2 flex-wrap my-2">
-                <button class="btn btn-outline-dark rounded-pill px-4">Plant Care</button>
-                <button class="btn btn-dark text-white rounded-pill px-4">Buy a plant</button>
-            </div>
-        </div>
-
-    </section>
-
-
-    <section class="container py-5">
-        <h2 class="playfair text-center">Plant Collection</h2>
-        <div class="d-flex gap-3 flex-nowrap flex-column flex-md-row mt-5">
-            <div class="collections-container">
-                <div class="d-flex gap-3 flex-nowrap collectionsCarousel" id="collectionsCarousel">
-
-                </div>
+        <div class="hero ps-md-5 h-50 d-flex flex-column justify-content-center 
+        position-relative">
+            <img src="./src/illustration/singleLeaf.svg" class="position-absolute illustration-leaf-single"
+                alt="singleleaf">
+            <h5 class="my-2 z-1 ">--- Love Nature</h5>
+            <h1 class="primary-font my-4 z-1 playfair">Take a new friend to your home</h1>
+            <div class="d-flex row-gap-3 mt-5 column-gap-2 flex-wrap mb-2 z-1 ">
+                <button class="btn outline-primary-button rounded-pill px-4">Plant Care</button>
+                <button class="btn outline-primary-button rounded-pill px-4">Buy a plant</button>
             </div>
 
-            <div class="d-flex flex-row flex-md-column order-last justify-content-center">
-                <button
-                    class="btn btn-close-white rounded-circle d-flex justify-content-center align-items-center back-button"><img
-                        src="./src/hero/playbtnNext.svg" alt="next"></button>
-                <button onclick="onNext()"
-                    class="btn btn-close-white rounded-circle d-flex justify-content-center align-items-center back-button"><img
-                        src="./src/hero/playbtn.svg" alt="back"></button>
+            <div class="blur-blob blur-illustration rounded-circle position-absolute z-0 "></div>
+
+            <div class="position-absolute d-flex gap-3 social-icons">
+                <img role="button" class="hover-icon" src="./src/social/facebook.svg" width="10px" alt="facebook">
+                <img role="button" class="hover-icon" src="./src/social/instagram.svg" width="20px" alt="instagram">
+                <img role="button" class="hover-icon" src="./src/social/pinterest.svg" width="15px" alt="pinterest">
             </div>
         </div>
     </section>
 
 
-    <section class="container d-flex flex-column flex-md-row justify-content-around gap-md-3  align-items-center py-5">
+
+    <section class="container-md py-4">
+        <div class="blur-blob blur-illustration-3 rounded-circle position-absolute z-0 "></div>
+
+        <h3 class="playfair text-center font-dark">Plant Collection</h3>
+
+        <div class="d-flex flex-column flex-md-row">
+            <div class="overflow-hidden collectionsCarouselContainer">
+
+                <div class="d-flex" id="collectionsCarousel">
+                </div>
+            </div>
+            <div class="carouselControls d-flex flex-md-column flex-row justify-content-center gap-1">
+                <img role="button" src="./src/collections/next.svg" alt="next" id="nextBtn">
+                <img role="button" src="./src/collections/back.svg" alt="back" id="backBtn">
+
+            </div>
+        </div>
+    </section>
+
+    <img src="./src/experience/illustration.svg" class="position-absolute illustration-plant" alt="leaf">
+
+    <section
+        class="container d-flex flex-column flex-md-row justify-content-around gap-md-3  align-items-center py-5 pb-0">
+        <img src="./src/illustration/twoleafGroup.svg" class="position-absolute illustration-leaf-group" alt="leaf">
         <img src="./src/experience/hero.svg" class="hero-img"></img>
         <div class="hero-text mt-5">
             <h3 class="playfair fs-1">Our journey</h3>
-            <p class="playfair text-neutral mt-4">It is a long established fact that a reader will be distracted by
+            <p class="playfair text-neutral mt-3 mb-5">It is a long established fact that a reader will be distracted by
                 the
                 readable content
                 of a page when It
                 is a long .It is a long established fact that a reader will be distracted by the readable content of a
                 is simply.</p>
 
-            <button class="btn btn-dark shade-primary rounded-pill px-4">Get Start</button>
+            <button class="btn filled-primary-button shade-primary rounded-pill px-4">Get Start</button>
         </div>
     </section>
 
-
-    <section class="container py-5 pb-2">
-        <h3 class="playfair primary-font my-5">Our Advantages</h3>
-        <div class="row justify-content-center gx-5 gy-3">
-            <div class="col-10 col-md-6 col-lg-4">
+    <img src="./src/illustration/singleLeaf.svg" class="position-absolute leaf-illustration-6" alt="leaf">
+    <img src="./src/illustration/singleLeaf.svg" class="position-absolute leaf-illustration-4" alt="leaf">
+    <img src="./src/illustration/singleLeaf.svg" class="position-absolute leaf-illustration-5" alt="leaf">
+    <section class="container p-3 p-md-5 pb-2 overflow-x-hidden">
+        <div class="blur-blob blur-illustration-2 rounded-circle position-absolute z-0 "></div>
+        <h3 class="playfair primary-font my-5 fw-semibold fs-1 font-dark">Our advantages</h3>
+        <div class="row justify-content-end justify-content-md-center mb-5 gx-5 gy-3">
+            <div class="col-11 col-md-6 col-lg-4">
                 <div
-                    class="flex-shrink-0 rounded-1  position-relative px-5 py-4 border border-0 secondary-background flex-row">
-                    <img src="./src/advantages/wateringcan.svg" width="50px" height="50px"
-                        class="card-img-top position-absolute end-0 top-50 translate-middle " alt="can">
+                    class="flex-shrink-0 d-flex align-items-center rounded-4  position-relative px-5 py-4 border border-0 secondary-background flex-row w-auto">
+                    <img src="./src/advantages/order.svg" width="50px" height="50px"
+                        class="card-img-top width-fit feature-card-image" alt="can">
                     <div class="card-body ps-1">
                         <h5 class="card-title">Easy Order</h5>
-                        <p class="card-text">It is a long established fact that a reader will be.
+                        <p class="card-text text-neutral fw-light mt-2 font-16">It is a long established fact that a
+                            reader will
+                            be.
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="col-10 col-md-6 col-lg-4">
+            <div class="col-11 col-md-6 col-lg-4">
                 <div
-                    class="flex-shrink-0 rounded-1 position-relative px-5 py-4 border border-0 secondary-background flex-row">
+                    class="flex-shrink-0 d-flex align-items-center rounded-4  position-relative px-5 py-4 border border-0 secondary-background flex-row w-auto">
                     <img src="./src/advantages/wateringcan.svg" width="50px" height="50px"
-                        class="card-img-top position-absolute end-0 top-50 translate-middle " alt="can">
+                        class="card-img-top width-fit feature-card-image" alt="can">
                     <div class="card-body ps-1">
-                        <h5 class="card-title">Easy Order</h5>
-                        <p class="card-text">It is a long established fact that a reader will be.
+                        <h5 class="card-title">Fast delivery</h5>
+                        <p class="card-text text-neutral fw-light mt-2 font-16">It is a long established fact that a
+                            reader will
+                            be.
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="col-10 col-md-6 col-lg-4">
+            <div class="col-11 col-md-6 col-lg-4">
                 <div
-                    class="flex-shrink-0 rounded-1 position-relative px-5 py-4 border border-0 secondary-background flex-row">
-                    <img src="./src/advantages/wateringcan.svg" width="50px" height="50px"
-                        class="card-img-top position-absolute end-0 top-50 translate-middle " alt="can">
+                    class="flex-shrink-0 d-flex align-items-center rounded-4  position-relative px-5 py-4 border border-0 secondary-background flex-row w-auto">
+                    <img src="./src/advantages/vaseflower.svg" width="50px" height="50px"
+                        class="card-img-top width-fit feature-card-image" alt="can">
                     <div class="card-body ps-1">
                         <h5 class="card-title">Easy Order</h5>
-                        <p class="card-text">It is a long established fact that a reader will be.
+                        <p class="card-text text-neutral fw-light mt-2 font-16">It is a long established fact that a
+                            reader will
+                            be.
                         </p>
                     </div>
                 </div>
@@ -160,60 +186,177 @@
         </div>
     </section>
 
+    <section
+        class="contactusSection p-0 overflow-x-hidden container-fluid d-flex flex-column flex-md-row w-100 position-relative align-items-center ">
 
-    <section class="container py-5">
-        <h3 class="playfair primary-font my-5 text-center">Choosing right plans</h3>
+        <img src="./src/illustration/leafGroup2.svg" alt="leaf" class="position-absolute bottom-0 end-0 z-3 "
+            width="300px">
+
+
+        <div class="form-background">
+        </div>
+
+        <form class="form-container form-bg rounded-start-5 position-absolute p-4 p-md-5">
+            <h3 class="fs-1 playfair">Ask us anything</h3>
+            <input type="text" placeholder="Name"
+                class="w-100 mt-3 px-3 py-2 bg-transparent border-bottom border border-0">
+            <input type="text" placeholder="Phone"
+                class="w-100 mt-3 px-3 py-2 bg-transparent border-bottom border border-0">
+            <input type="text" placeholder="E-mail"
+                class="w-100 mt-3 px-3 py-2 bg-transparent border-bottom border border-0">
+
+            <div class="position-relative textAreaFormDiv">
+
+                <textarea rows="3" type="text"
+                    class="w-100 mt-3 px-3 py-2 bg-transparent border-bottom border border-0"></textarea>
+                <label class="position-absolute ">Message</label>
+            </div>
+            <div class="d-flex justify-content-between mt-4">
+                <button class="btn filled-primary-button rounded-pill px-5 py-3">Send</button>
+                <div class="d-flex gap-3 social-icons">
+                    <img role="button" class="hover-icon" src="./src/social/facebook.svg" width="10px" alt="facebook">
+                    <img role="button" class="hover-icon" src="./src/social/instagram.svg" width="20px" alt="instagram">
+                    <img role="button" class="hover-icon" src="./src/social/pinterest.svg" width="15px" alt="pinterest">
+                </div>
+            </div>
+
+        </form>
+
+
+    </section>
+
+    <section class="container-fluid p-3 p-md-5 pt-0">
+        <div class="blur-blob blur-illustration-3 rounded-circle position-absolute z-0 "></div>
+        <h3 class="playfair font-dark my-5 text-center">Choosing right plants</h3>
 
         <div class="row justify-content-center g-4">
             <div class="col-12 col-md-5 col-lg-4">
-                <div class="card shade-secondary hover-card p-4 border border-0" style="width: 18rem;">
-                    <div class="imgDiv">
+                <div role="button"
+                    class="card d-flex flex-row flex-md-column align-items-center align-items-md-start shade-secondary hover-card p-4 border border-0 ">
+                    <div class="imgDiv fit-content">
                         <img src="./src/plans/garden.svg" class="card-img-top" alt="card-2">
                     </div>
-                    <div class="card-body p-0 mt-3">
+                    <div class="card-body p-0 ms-2 ms-sm-5 ms-md-0 mt-3">
                         <h4 class="card-title font-dark pt-2 primary-font playfair">Garden plants</h4>
-                        <p class="card-text text-neutral py-3">Some quick example text to build on the card title and
-                            make up the
-                            bulk of
-                            the card's content.</p>
+                        <p class="card-text text-neutral py-3 font-16">It is a long established fact that a reader will
+                            be
+                            distracted by the </p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-5 col-lg-4">
-                <div class="card shade-secondary hover-card p-4 border border-0" style="width: 18rem;">
-                    <div class="imgDiv">
-                        <img src="./src/plans/home.svg" class="card-img-top" alt="card-2">
-                    </div>
-                    <div class="card-body p-0 mt-3">
-                        <h4 class="card-title font-dark pt-2 primary-font playfair">Home plants</h4>
-                        <p class="card-text text-neutral py-3">Some quick example text to build on the card title and
-                            make up the
-                            bulk of
-                            the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-5 col-lg-4">
-                <div class="card shade-secondary hover-card p-4 border border-0" style="width: 18rem;">
-                    <div class="imgDiv">
+                <div role="button"
+                    class="card d-flex flex-row flex-md-column align-items-center shade-secondary hover-card p-4 border border-0 align-items-md-start">
+                    <div class="imgDiv fit-content">
                         <img src="./src/plans/indoor.svg" class="card-img-top" alt="card-2">
                     </div>
-                    <div class="card-body p-0 mt-3">
+                    <div class="card-body p-0 ms-2 ms-sm-5 ms-md-0 mt-3">
                         <h4 class="card-title font-dark pt-2 primary-font playfair">Indoor plants</h4>
-                        <p class="card-text text-neutral py-3">Some quick example text to build on the card title and
-                            make up the
-                            bulk of
-                            the card's content.</p>
+                        <p class="card-text text-neutral py-3 font-16">It is a long established fact that a reader will
+                            be
+                            distracted by the </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 col-lg-4">
+                <div role="button"
+                    class="card d-flex flex-row flex-md-column align-items-center align-items-md-start shade-secondary hover-card p-4 border border-0">
+                    <div class="imgDiv fit-content">
+                        <img src="./src/plans/home.svg" class="card-img-top" alt="card-2">
+                    </div>
+                    <div class="card-body p-0 ms-2 ms-sm-5 ms-md-0 mt-3">
+                        <h4 class="card-title font-dark pt-2 primary-font playfair">Home plants</h4>
+                        <p class="card-text text-neutral py-3 font-16">It is a long established fact that a reader will
+                            be
+                            distracted by the </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="container-fluid p-5 m-0 footer-background">
-        <div class="row justify-content-between">
-            <div class="col-12 col-md-4">
-                <h2 class="text-title">nuvosa</h2>
+    <img src="./src/illustration/leafGroup3.svg" height="200px" alt="leaf" class="position-absolute end-0">
+    <img src="./src/illustration/singleLeaf.svg" class="position-absolute leaf-illustration-7" alt="leaf">
+
+    <section class="container p-3  p-md-5 overflow-x-hidden">
+        <div class="blur-blob blur-illustration-4 rounded-circle position-absolute z-0 "></div>
+        <h2 class="playfair z-3 position-relative font-dark">What Clients talk about us</h2>
+        <div id="testimonyCarouselContainer"
+            class="carouselTestimony mt-4 d-flex justify-content-start align-items-center">
+            <div
+                class="item shade-tertiary d-flex flex-column flex-md-row active align-items-center p-2 p-md-4 rounded-3 flex-shrink-0">
+                <img src="./src/testimonials/testimonial-mary.svg" height="120px" alt="mary">
+                <div class="testimonial-text p-3 px-md-5 position-relative font-16">
+                    <img src="./src/testimonials/quote.svg" alt="quote" class="position-absolute ">
+                    It is a long established fact that a reader will be distracted by the readable content of a page
+                    when It is a long .It is a long .It is a long established fact that a reader will be . It is a long
+                    established fact that a reader
+                    <img src="./src/testimonials/quote.svg" alt="quote" class="position-absolute ">
+                </div>
+            </div>
+            <button onclick="slidetoNextTestimony()"
+                class="fit-content rounded-circle position-relative z-3  p-2 d-flex justify-content-center align-items-center me-3 btn">
+                <img src="./src/hero/playbtn.svg" width="15px" alt="next">
+            </button>
+            <div
+                class="item shade-tertiary d-flex flex-column flex-md-row align-items-center p-2 p-md-4 rounded-3 flex-shrink-0">
+                <img src="./src/testimonials/testimonial.svg" height="120px" alt="mary">
+                <div class="testimonial-text p-3 px-md-5 position-relative font-16">
+                    <img src="./src/testimonials/quote.svg" alt="quote" class="position-absolute ">
+                    It is a long established fact that a reader will be distracted by the readable content of a page
+                    when It is a long .It is a long .It is a long established fact that a reader will be . It is a long
+                    established fact that a reader
+                    <img src="./src/testimonials/quote.svg" alt="quote" class="position-absolute ">
+                </div>
+            </div>
+            <button onclick="slidetoNextTestimony()"
+                class="fit-content position-relative z-3  rounded-circle p-2 d-flex justify-content-center align-items-center me-3 btn">
+                <img src="./src/hero/playbtn.svg" width="15px" alt="next">
+            </button>
+            <div
+                class="item shade-tertiary d-flex flex-column flex-md-row align-items-center p-2 p-md-4 rounded-3 flex-shrink-0">
+                <img src="./src/testimonials/testimonial-mary.svg" height="120px" alt="">
+                <div class="testimonial-text p-3 px-md-5 position-relative font-16">
+                    <img src="./src/testimonials/quote.svg" alt="" class="position-absolute ">
+                    It is a long established fact that a reader will be distracted by the readable content of a page
+                    when It is a long .It is a long .It is a long established fact that a reader will be . It is a long
+                    established fact that a reader
+                    <img src="./src/testimonials/quote.svg" alt="" class="position-absolute ">
+                </div>
+            </div>
+            <button onclick="slidetoNextTestimony()"
+                class="fit-content rounded-circle p-2 d-flex justify-content-center align-items-center me-3 btn">
+                <img src="./src/hero/playbtn.svg" width="15px" alt="next">
+            </button>
+        </div>
+    </section>
+
+    <section
+        class="container-fluid py-5 ps-md-5 pe-0 align-items-center d-flex gap-2 flex-column flex-md-row justify-content-between">
+        <div class="plant-care-text">
+            <h2 class="playfair">Plant care</h2>
+            <p class="mt-5 mb-0">It is a long established fact that a reader will be distracted by the readable content
+                of a
+                page when It
+                is a long .It is a long established fact that a reader will be distracted by the readable content of a
+                is simply.</p>
+            <p class="mt-0">a page when It is a long .It is a long established fact that a reader will be distracted by
+                the readable
+                content of a is simply.</p>
+            <button class="btn filled-primary-button rounded-pill px-4 mb-5">Read the blog</button>
+            <img src="./src/illustration/leafGroup.svg" height="100px" alt="">
+        </div>
+        <img src="./src/plantcare/plantcare.webp" class="plant-care-image rounded-start-4">
+
+        </img>
+    </section>
+
+    <footer class="container-fluid p-3 p-md-5 pb-0 m-0 footer-background position-relative">
+        <img src="./src/footer/illustartion.svg" alt="illustration" width="200px"
+            class="position-absolute top-0 start-0">
+        <div class="row justify-content-between z-2 position-relative px-md-5 gy-5">
+            <div class="col-12 col-md-4 d-flex flex-column gap-3">
+                <h2 class="text-title fw-light">nuvosa</h2>
                 <h6 class="text-tertiary fw-light font-16">It is a long established fact that a reader will be
                     distracted
                     by
@@ -221,35 +364,54 @@
                     content of a page
                     when It
                     is a long .It is a long established fact that a reader will be distracted by the.</h6>
+                <div class="footer-social-wrapper">
+                    <div class="footer-social rounded-1 d-inline-block">
+                        <img role="button" class="" src="./src/social/footer-fb.svg" width="30px" height="30px"
+                            alt="facebook">
+                    </div>
+                    <div class="footer-social rounded-1 d-inline-block">
+                        <img role="button" class="" src="./src/social/insta.svg" width="30px" height="30px"
+                            alt="instagram">
+                    </div>
+                    <div class="footer-social rounded-1 d-inline-block">
+                        <img role="button" class="" src="./src/social/youtube.svg" width="30px" height="30px"
+                            alt="youtube">
+                    </div>
+                    <div class="footer-social rounded-1 d-inline-block">
+                        <img role="button" class="" src="./src/social/twitter.svg" width="30px" height="30px"
+                            alt="twitter">
+                    </div>
+
+                </div>
             </div>
-            <div class="col-12 col-md-2">
+            <div class="col-4 col-md-2">
                 <h3 class="text-tertiary">Services</h3>
-                <h6 class="text-tertiary fw-light font-16">Gardening</h6>
-                <h6 class="text-tertiary fw-light font-16">Lawn Service</h6>
-                <h6 class="text-tertiary fw-light font-16">Leaf Removal</h6>
-                <h6 class="text-tertiary fw-light font-16">Decoration</h6>
-                <h6 class="text-tertiary fw-light font-16">Trimming</h6>
+                <h6 class="text-tertiary fw-light font-16" role="button">Gardening</h6>
+                <h6 class="text-tertiary fw-light font-16" role="button">Lawn Service</h6>
+                <h6 class="text-tertiary fw-light font-16" role="button">Leaf Removal</h6>
+                <h6 class="text-tertiary fw-light font-16" role="button">Decoration</h6>
+                <h6 class="text-tertiary fw-light font-16" role="button">Trimming</h6>
             </div>
-            <div class="col-12 col-md-2">
+            <div class="col-4 col-md-2">
                 <h3 class="text-tertiary">Support</h3>
-                <h6 class="text-tertiary fw-light font-16">Gardening</h6>
-                <h6 class="text-tertiary fw-light font-16">Lawn Service</h6>
-                <h6 class="text-tertiary fw-light font-16">Leaf Removal</h6>
-                <h6 class="text-tertiary fw-light font-16">Decoration</h6>
-                <h6 class="text-tertiary fw-light font-16">Trimming</h6>
+                <h6 class="text-tertiary fw-light font-16" role="button">Gardening</h6>
+                <h6 class="text-tertiary fw-light font-16" role="button">Lawn Service</h6>
+                <h6 class="text-tertiary fw-light font-16" role="button">Leaf Removal</h6>
+                <h6 class="text-tertiary fw-light font-16" role="button">Decoration</h6>
+                <h6 class="text-tertiary fw-light font-16" role="button">Trimming</h6>
             </div>
-            <div class="col-12 col-md-2">
+            <div class="col-4 col-md-2">
                 <h3 class="text-tertiary">Company</h3>
-                <h6 class="text-tertiary fw-light font-16">Gardening</h6>
-                <h6 class="text-tertiary fw-light font-16">Lawn Service</h6>
-                <h6 class="text-tertiary fw-light font-16">Leaf Removal</h6>
-                <h6 class="text-tertiary fw-light font-16">Decoration</h6>
-                <h6 class="text-tertiary fw-light font-16">Trimming</h6>
+                <h6 class="text-tertiary fw-light font-16" role="button">Gardening</h6>
+                <h6 class="text-tertiary fw-light font-16" role="button">Lawn Service</h6>
+                <h6 class="text-tertiary fw-light font-16" role="button">Leaf Removal</h6>
+                <h6 class="text-tertiary fw-light font-16" role="button">Decoration</h6>
+                <h6 class="text-tertiary fw-light font-16" role="button">Trimming</h6>
             </div>
         </div>
-        <div class=" mt-5 d-flex text-tertiary justify-content-between ">
-            <p class="font-10">Copyright © 2023 nuvosa, All rights reserved.</p>
-            <ul class="d-flex align-items-end font-10 list-unstyled gap-2">
+        <div class="mt-5 pt-2 d-flex border-top border border-0 text-tertiary justify-content-between ">
+            <p class="font-16">Copyright © 2023 nuvosa, All rights reserved.</p>
+            <ul class="d-flex align-items-end font-16 list-unstyled gap-2">
                 <li>Terms of use</li>
                 <li>copyright & trademark</li>
                 <li>Policy</li>
@@ -258,10 +420,12 @@
     </footer>
 
 
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
