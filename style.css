@@ -72,7 +72,7 @@ body {
 }
 
 .font-16 {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .font-10 {
@@ -168,7 +168,7 @@ body {
   filter: invert(82%) sepia(13%) saturate(1698%) hue-rotate(342deg) brightness(104%) contrast(92%);
 }
 
-.section-1 {
+.section-hero {
   height: 120vh;
 }
 
@@ -411,7 +411,7 @@ body {
 }
 
 .form-background {
-  background: url(./src/form/form-background.svg) no-repeat center;
+  background: url(./src/form/formBackground.svg) no-repeat center;
   background-size: cover;
   width: 100%;
   flex-grow: 0;
@@ -447,7 +447,7 @@ body {
 }
 
 @media screen and (min-width: 572px) {
-  .section-1 {
+  .section-hero {
     height: 115vh;
   }
   .carouselContainer .carousel-buttons {
@@ -457,6 +457,9 @@ body {
   }
 }
 @media screen and (min-width: 768px) {
+  .font-16 {
+    font-size: 1rem;
+  }
   .social-icons {
     bottom: -40%;
   }
@@ -505,7 +508,7 @@ body {
     translate: 0% -120%;
     filter: drop-shadow(-16px 59px 5px rgba(2, 22, 5, 0.08));
   }
-  .section-1 {
+  .section-hero {
     height: 80vh;
   }
   .carousel {

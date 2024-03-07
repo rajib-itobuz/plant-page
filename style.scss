@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @font-face {
     font-family: playfair;
     src: url(./fonts/playfair.ttf);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -20,6 +21,7 @@ $form-bg: #FAF9F7;
 body {
     font-family: "Poppins", sans-serif;
 }
+
 
 // global classes
 .primary-font {
@@ -86,7 +88,7 @@ body {
 }
 
 .font-16 {
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .font-10 {
@@ -191,7 +193,7 @@ body {
 }
 
 
-.section-1 {
+.section-hero {
     height: 120vh;
 }
 
@@ -325,16 +327,13 @@ body {
 }
 
 .carouselTestimony {
-    // padding-bottom: 0px;
     transition: transform 0.5s ease;
 
-    // .active::before
     button {
         margin-left: 30px;
     }
 
     .item {
-        // margin-left: 50px;
         width: 80%;
         max-width: 600px;
 
@@ -374,14 +373,12 @@ body {
 
 .plant-care-text {
     width: 80%;
-    // max-width: 350px;
 }
 
 .plant-care-image {
     width: 80%;
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px;
-    // max-width: 400px;
 }
 
 .footer-background {
@@ -469,7 +466,7 @@ body {
 
 
 .form-background {
-    background: url(./src/form/form-background.svg) no-repeat center;
+    background: url(./src/form/formBackground.svg) no-repeat center;
     background-size: cover;
     width: 100%;
     flex-grow: 0;
@@ -510,7 +507,7 @@ body {
 
 
 @media screen and (min-width:572px) {
-    .section-1 {
+    .section-hero {
         height: 115vh;
     }
 
@@ -523,6 +520,10 @@ body {
 
 
 @media screen and (min-width:768px) {
+
+    .font-16 {
+        font-size: 1rem;
+    }
 
     .social-icons {
         bottom: -40%;
@@ -584,7 +585,7 @@ body {
         filter: $illustrationShadow
     }
 
-    .section-1 {
+    .section-hero {
         height: 80vh;
     }
 
@@ -638,7 +639,6 @@ body {
     }
 
     .carouselControls {
-        // width: 80px;
         width: fit-content;
     }
 }

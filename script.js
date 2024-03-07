@@ -14,6 +14,7 @@ const testimonySlider = document.getElementById("testimonyCarouselContainer");
 const items = document.querySelectorAll(".carouselTestimony .item");
 const progress = document.getElementById("progressBar");
 
+// image carousel items
 const imageCarouselItems = [
     './src/hero/flower.png',
     './src/hero/vase.png',
@@ -23,62 +24,45 @@ const imageCarouselItems = [
     './src/hero/waterfall.png',
 ];
 
-const testimonies = [
-    {
-        imgUrl: './src/testimonials/testimonial-mary.svg',
-        text: 'It is a long established fact that a reader will be distracted by the readable content of a page when It is a long .It is a long .It is a long established fact that a reader will be . It is a long established fact that a reader .'
-    },
-    {
-        imgUrl: './src/testimonials/testimonial-mary.svg',
-        text: 'It is a long established fact that a reader will be distracted by the readable content of a page when It is a long .It is a long .It is a long established fact that a reader will be . It is a long established fact that a reader .'
-    },
-    {
-        imgUrl: './src/testimonials/testimonial-mary.svg',
-        text: 'It is a long established fact that a reader will be distracted by the readable content of a page when It is a long .It is a long .It is a long established fact that a reader will be . It is a long established fact that a reader .'
-    }
-
-]
-
+// plant collections carousel images
 const collectionsImage = [
     {
         title: "Bird Of Paradise",
-        imgUrl: './src/collections/plant-1.svg'
+        imgUrl: './src/collections/plantVase.svg'
     },
     {
         title: "Rubber Plants",
-        imgUrl: './src/collections/plant-2.svg'
+        imgUrl: './src/collections/plantJar.svg'
     },
     {
         title: "String of pearls",
-        imgUrl: './src/collections/plant-3.svg'
+        imgUrl: './src/collections/plant.svg'
     },
     {
         title: "Bird Of Paradise",
-        imgUrl: './src/collections/plant-1.svg'
+        imgUrl: './src/collections/plantVase.svg'
     },
     {
         title: "Rubber Plants",
-        imgUrl: './src/collections/plant-2.svg'
+        imgUrl: './src/collections/plantJar.svg'
     },
     {
         title: "String of pearls",
-        imgUrl: './src/collections/plant-3.svg'
+        imgUrl: './src/collections/plant.svg'
     },
     {
         title: "Bird Of Paradise",
-        imgUrl: './src/collections/plant-1.svg'
+        imgUrl: './src/collections/plantVase.svg'
     },
     {
         title: "Rubber Plants",
-        imgUrl: './src/collections/plant-2.svg'
+        imgUrl: './src/collections/plantJar.svg'
     },
     {
         title: "String of pearls",
-        imgUrl: './src/collections/plant-3.svg'
+        imgUrl: './src/collections/plant.svg'
     },
 ];
-
-
 
 
 let count = 0;
@@ -100,7 +84,7 @@ const timer = setInterval(() => {
     count = (count + 1) % 11;
 
     progress.style.width = `${count * 10}%`
-    if (count == 10) {
+    if (count === 10) {
         carouselNextBtn.click();
         nextBtn.click();
 
@@ -156,10 +140,10 @@ const slidetoNextTestimony = () => {
 
 
     items[currentTestimonySlide].classList.remove("active");
-    currentTestimonySlide = (currentTestimonySlide + 1) % testimonies.length;
+    currentTestimonySlide = (currentTestimonySlide + 1) % 3;
     items[currentTestimonySlide].classList.add("active");
     testimonySlider.style.transform = `translateX(-${currentTestimonySlide * (itemWidth + buttonWidth + 50)}px)`
-    console.log(testimonySlider);
+
 }
 
 
@@ -183,12 +167,11 @@ const parentLeft = collectionsCarousel.getBoundingClientRect().left;
 
         const card = document.createElement("div");
         card.setAttribute("class", "card border border-0 flex-shrink-0");
-        // card.style.width = "32%";
 
         const imgDiv = document.createElement("img");
         imgDiv.src = element.imgUrl;
+        imgDiv.alt = element.title
         imgDiv.setAttribute("class", "card-img-top")
-        // imgDiv.dataset.id = index;
 
         const cardBody = document.createElement("div");
         cardBody.setAttribute("class", "card-body");
@@ -207,9 +190,12 @@ const parentLeft = collectionsCarousel.getBoundingClientRect().left;
     });
 })();
 
+// this part is only available after adding elements hence it is fetched here
 const card = document.querySelector(".collectionsCarouselContainer .item");
 const countCards = document.querySelector(".collectionsCarouselContainer .item").length;
 
+
+// add event listeners
 backBtn.addEventListener("click", backSlide);
 nextBtn.addEventListener("click", nextSlide);
 carouselBackBtn.addEventListener("click", () => sliderFunc('back'));
